@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="THORNE" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="前言
+起初因为被Markdown格式的写作风格吸引：简练，无需刻意排版，支持数学公式渲染和代码高亮，支持导出为PDF等格式方便跨设备使用，它既不像Word那样需要刻意的排版以至于打扰到写作，也不至于像Latex那样需要繁琐的配置，让你能直接上手写作，而不是花费时间在其他地方。
+话虽如此，当正式写的时候你就会发现有很多问题了。首先是找到一款颜值高且功能完备（满足我的需求）的Markdown编辑器。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客、写作的完美结合：Hexo + Markdown">
+<meta property="og:url" content="taczer.github.io/2017/12/09/博客、写作的完美结合：Hexo-+-Markdown/index.html">
+<meta property="og:site_name" content="THORNE">
+<meta property="og:description" content="前言
+起初因为被Markdown格式的写作风格吸引：简练，无需刻意排版，支持数学公式渲染和代码高亮，支持导出为PDF等格式方便跨设备使用，它既不像Word那样需要刻意的排版以至于打扰到写作，也不至于像Latex那样需要繁琐的配置，让你能直接上手写作，而不是花费时间在其他地方。
+话虽如此，当正式写的时候你就会发现有很多问题了。首先是找到一款颜值高且功能完备（满足我的需求）的Markdown编辑器。">
+<meta property="og:updated_time" content="2017-12-03T15:43:01.765Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客、写作的完美结合：Hexo + Markdown">
+<meta name="twitter:description" content="前言
+起初因为被Markdown格式的写作风格吸引：简练，无需刻意排版，支持数学公式渲染和代码高亮，支持导出为PDF等格式方便跨设备使用，它既不像Word那样需要刻意的排版以至于打扰到写作，也不至于像Latex那样需要繁琐的配置，让你能直接上手写作，而不是花费时间在其他地方。
+话虽如此，当正式写的时候你就会发现有很多问题了。首先是找到一款颜值高且功能完备（满足我的需求）的Markdown编辑器。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="taczer.github.io/2017/12/09/博客、写作的完美结合：Hexo-+-Markdown/"/>
+
+
+
+
+
+  <title>博客、写作的完美结合：Hexo + Markdown | THORNE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">THORNE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Stay foolish,Stay hungry!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="taczer.github.io/2017/12/09/博客、写作的完美结合：Hexo-+-Markdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JackThorne">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="THORNE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">博客、写作的完美结合：Hexo + Markdown</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-09T16:36:24+08:00">
+                2017-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>前言</strong></p>
+<p>起初因为被Markdown格式的写作风格吸引：简练，无需刻意排版，支持数学公式渲染和代码高亮，支持导出为PDF等格式方便跨设备使用，它既不像Word那样需要刻意的排版以至于打扰到写作，也不至于像Latex那样需要繁琐的配置，让你能直接上手写作，而不是花费时间在其他地方。</p>
+<p>话虽如此，当正式写的时候你就会发现有很多问题了。首先是找到一款颜值高且功能完备（满足我的需求）的Markdown编辑器。</p>
+<hr>
+<h2 id="Markdown编辑器推荐"><a href="#Markdown编辑器推荐" class="headerlink" title="Markdown编辑器推荐"></a>Markdown编辑器推荐</h2><p>说明：以下Markdown编辑器包含通过组合方式实现功能的且只讨论Windows平台</p>
+<h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h3><p><strong>优点：</strong></p>
+<p>首先，这篇文字就是在Typora上写就的。Typora拥有所有我所必须的功能：数学公式支持，代码高亮，导出多种格式，方便在手机上，iPad上观看。除此以外，Typora的颜值也相当了得，在使用过大概十多款编辑器后，还是它最受我的喜爱。</p>
+<p><strong>缺点：</strong></p>
+<p>不支持云同步。目前的解决方案是云坚果云进行同步。</p>
+<h3 id="LitteStory（小书匠）"><a href="#LitteStory（小书匠）" class="headerlink" title="LitteStory（小书匠）"></a>LitteStory（小书匠）</h3><p><strong>优点：</strong></p>
+<p>小书匠应该是我使用频率最高的一款Markdown编辑器了，它功能之丰富，目前在这个领域应该还没有什么敌手。基本功能：数学公式、代码高亮、多格式导出、云同步、个性化导出、编辑器主题丰富</p>
+<p><strong>缺点：</strong></p>
+<p>界面设计不够好，有选项之间会遮挡等问题的存在。</p>
+<h3 id="有道云笔记"><a href="#有道云笔记" class="headerlink" title="有道云笔记"></a>有道云笔记</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全，支持多设备云同步。支持网页剪藏功能，微信、微博页面保存。多终端支持</p>
+<p><strong>缺点：</strong></p>
+<p>有广告</p>
+<h3 id="为知笔记"><a href="#为知笔记" class="headerlink" title="为知笔记"></a>为知笔记</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全，有插件扩展，支持多种编辑器，可定制。多终端支持</p>
+<p><strong>缺点：</strong></p>
+<p>需要付费</p>
+<h3 id="Yu-Writer"><a href="#Yu-Writer" class="headerlink" title="Yu Writer"></a>Yu Writer</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全，</p>
+<p><strong>缺点：</strong></p>
+<p>没有云听不</p>
+<h3 id="Moeditor"><a href="#Moeditor" class="headerlink" title="Moeditor"></a>Moeditor</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全</p>
+<p><strong>缺点：</strong></p>
+<p>不支持多设备云同步。</p>
+<p>###VsCode+markdown preview enhanced</p>
+<p><strong>优点：</strong></p>
+<p>格式支持齐全，无缝衔接到代码说明，通过插件支持导出到PDF</p>
+<p><strong>缺点：</strong></p>
+<p>需要配置，打开速度不如sublime，没有同步</p>
+<h3 id="Sublime-markdown-preview"><a href="#Sublime-markdown-preview" class="headerlink" title="Sublime+markdown preview"></a>Sublime+markdown preview</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全，打开速度快，写作体验好</p>
+<p><strong>缺点：</strong></p>
+<p>需要配置，无云同步</p>
+<h3 id="Atom-markdown-preview-enhanced"><a href="#Atom-markdown-preview-enhanced" class="headerlink" title="Atom+markdown preview enhanced"></a>Atom+markdown preview enhanced</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全，界面现代化</p>
+<p><strong>缺点：</strong></p>
+<p>无云同步，打开速度慢</p>
+<h3 id="Visual-Studio-2017-Markdown-Support"><a href="#Visual-Studio-2017-Markdown-Support" class="headerlink" title="Visual Studio 2017+Markdown Support"></a>Visual Studio 2017+Markdown Support</h3><p><strong>优点：</strong></p>
+<p>支持数学公式，支持在VS下写Markdown文档</p>
+<p><strong>缺点：</strong></p>
+<p>在VS下就不要求同步了吧······</p>
+<h3 id="蚂蚁笔记"><a href="#蚂蚁笔记" class="headerlink" title="蚂蚁笔记"></a>蚂蚁笔记</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全，支持多设备云同步。自带博客支持，将写好的markdown文档发布成为blog</p>
+<p><strong>缺点：</strong></p>
+<p>收费，界面设计不够漂亮</p>
+<h3 id="作业部落"><a href="#作业部落" class="headerlink" title="作业部落"></a>作业部落</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全</p>
+<p><strong>缺点：</strong></p>
+<p>收费才能导出PDF</p>
+<h3 id="OneNote"><a href="#OneNote" class="headerlink" title="OneNote"></a>OneNote</h3><p><strong>优点：</strong></p>
+<p>格式支持齐全，通过插件可以解决所有所需</p>
+<p><strong>缺点：</strong></p>
+<p>写公式的时候体验不好，复制latex公式时不能转化，只能手打</p>
+<h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><h3 id="CSDN"><a href="#CSDN" class="headerlink" title="CSDN"></a>CSDN</h3><p>免费的博客</p>
+<p>###博客园</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/01/Code-and-MAth/" rel="next" title="Code and MAth">
+                <i class="fa fa-chevron-left"></i> Code and MAth
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/10/arduino光照控制/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">JackThorne</p>
+              <p class="site-description motion-element" itemprop="description">Think</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown编辑器推荐"><span class="nav-number">1.</span> <span class="nav-text">Markdown编辑器推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-number">1.1.</span> <span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LitteStory（小书匠）"><span class="nav-number">1.2.</span> <span class="nav-text">LitteStory（小书匠）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有道云笔记"><span class="nav-number">1.3.</span> <span class="nav-text">有道云笔记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为知笔记"><span class="nav-number">1.4.</span> <span class="nav-text">为知笔记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Yu-Writer"><span class="nav-number">1.5.</span> <span class="nav-text">Yu Writer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Moeditor"><span class="nav-number">1.6.</span> <span class="nav-text">Moeditor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublime-markdown-preview"><span class="nav-number">1.7.</span> <span class="nav-text">Sublime+markdown preview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atom-markdown-preview-enhanced"><span class="nav-number">1.8.</span> <span class="nav-text">Atom+markdown preview enhanced</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Visual-Studio-2017-Markdown-Support"><span class="nav-number">1.9.</span> <span class="nav-text">Visual Studio 2017+Markdown Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#蚂蚁笔记"><span class="nav-number">1.10.</span> <span class="nav-text">蚂蚁笔记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作业部落"><span class="nav-number">1.11.</span> <span class="nav-text">作业部落</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OneNote"><span class="nav-number">1.12.</span> <span class="nav-text">OneNote</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客推荐"><span class="nav-number">2.</span> <span class="nav-text">博客推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSDN"><span class="nav-number">2.1.</span> <span class="nav-text">CSDN</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JackThorne</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
