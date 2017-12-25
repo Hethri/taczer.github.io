@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="THORNE" type="application/atom+xml" />
 
@@ -83,9 +81,8 @@
 
 
 
-<meta name="description" content="title:TCP-Android-esp8266mathjax = true
-
-远程灯光控制系统的实现
+<meta name="description" content="title:TCP-Android-esp8266
+mathjax = true远程灯光控制系统的实现
 实现用手机客户端加arduino实现灯泡亮度的控制
 
 步骤如下
@@ -98,14 +95,13 @@ Android代码如下：
 
 MainActivity.java
 
-12345678910111213141516171819202122232425">
+123456789101112131415161718192021222324252">
 <meta property="og:type" content="article">
 <meta property="og:title" content="THORNE">
 <meta property="og:url" content="taczer.github.io/2017/12/12/Android-TCP学习/index.html">
 <meta property="og:site_name" content="THORNE">
-<meta property="og:description" content="title:TCP-Android-esp8266mathjax = true
-
-远程灯光控制系统的实现
+<meta property="og:description" content="title:TCP-Android-esp8266
+mathjax = true远程灯光控制系统的实现
 实现用手机客户端加arduino实现灯泡亮度的控制
 
 步骤如下
@@ -118,14 +114,15 @@ Android代码如下：
 
 MainActivity.java
 
-12345678910111213141516171819202122232425">
+123456789101112131415161718192021222324252">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/819239/201603/819239-20160319163212678-764336146.jpg">
-<meta property="og:updated_time" content="2017-12-12T14:21:14.352Z">
+<meta property="og:image" content="https://img.alicdn.com/imgextra/i2/85454698/TB2LKgRXVXXXXaWXXXXXXXXXXXX_!!85454698.jpg">
+<meta property="og:image" content="http://img.blog.csdn.net/20170220125150050?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGlleWFuMDgxMQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:updated_time" content="2017-12-12T16:16:03.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="THORNE">
-<meta name="twitter:description" content="title:TCP-Android-esp8266mathjax = true
-
-远程灯光控制系统的实现
+<meta name="twitter:description" content="title:TCP-Android-esp8266
+mathjax = true远程灯光控制系统的实现
 实现用手机客户端加arduino实现灯泡亮度的控制
 
 步骤如下
@@ -138,7 +135,7 @@ Android代码如下：
 
 MainActivity.java
 
-12345678910111213141516171819202122232425">
+123456789101112131415161718192021222324252">
 <meta name="twitter:image" content="http://images2015.cnblogs.com/blog/819239/201603/819239-20160319163212678-764336146.jpg">
 
 
@@ -350,9 +347,8 @@ MainActivity.java
 
       
         <hr>
-<p>title:TCP-Android-esp8266<br>mathjax = true</p>
-<hr>
-<h1 id="远程灯光控制系统的实现"><a href="#远程灯光控制系统的实现" class="headerlink" title="远程灯光控制系统的实现"></a>远程灯光控制系统的实现</h1><blockquote>
+<p>title:TCP-Android-esp8266</p>
+<h2 id="mathjax-true"><a href="#mathjax-true" class="headerlink" title="mathjax = true"></a>mathjax = true</h2><h1 id="远程灯光控制系统的实现"><a href="#远程灯光控制系统的实现" class="headerlink" title="远程灯光控制系统的实现"></a>远程灯光控制系统的实现</h1><blockquote>
 <p>实现用手机客户端加arduino实现灯泡亮度的控制</p>
 </blockquote>
 <p>步骤如下</p>
@@ -405,6 +401,36 @@ MainActivity.java
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _USART_C_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"include.h"</span></span></div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> Usart_Receive[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;;</div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> Usart_Cnt=<span class="number">0</span>;</div><div class="line">bit Usart_AT_flage;</div><div class="line">bit flage;</div><div class="line">bit Command_Flag;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitUART</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    TMOD = <span class="number">0x20</span>;</div><div class="line">    SCON = <span class="number">0x50</span>;</div><div class="line">    TH1 = <span class="number">0xFD</span>;</div><div class="line">    TL1 = TH1;</div><div class="line">    PCON = <span class="number">0x00</span>;</div><div class="line">    EA = <span class="number">1</span>;</div><div class="line">    ES = <span class="number">1</span>;</div><div class="line">    TR1 = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Send_Uart</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> value)</span> </span></div><div class="line">&#123;</div><div class="line">    ES=<span class="number">0</span>;  <span class="comment">//关闭串口中断  </span></div><div class="line">    TI=<span class="number">0</span>;   <span class="comment">//清发送完毕中断请求标志位   </span></div><div class="line">    SBUF=value; <span class="comment">//发送  </span></div><div class="line">    <span class="keyword">while</span>(TI==<span class="number">0</span>); <span class="comment">//等待发送完毕   </span></div><div class="line">    TI=<span class="number">0</span>;   <span class="comment">//清发送完毕中断请求标志位   </span></div><div class="line">    ES=<span class="number">1</span>;  <span class="comment">//允许串口中断  </span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">UARTInterrupt</span><span class="params">(<span class="keyword">void</span>)</span> interrupt 4</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(RI)</div><div class="line">    &#123;</div><div class="line">        RI=<span class="number">0</span>;</div><div class="line">        Usart_Receive[Usart_Cnt]=SBUF;<span class="comment">//接收串口数据</span></div><div class="line">        Usart_Cnt++;<span class="comment">//</span></div><div class="line">        <span class="comment">//返回数据以回车结尾，有回车，而且数据个数大于2，说明接收到了数据</span></div><div class="line">        <span class="keyword">if</span>(Usart_Receive[Usart_Cnt<span class="number">-2</span>]==<span class="string">'\r'</span> &amp;&amp; Usart_Receive[Usart_Cnt<span class="number">-1</span>]==<span class="string">'\n'</span> &amp;&amp; Usart_Cnt &gt;= <span class="number">2</span>)</div><div class="line">        &#123;</div><div class="line">            Usart_Cnt = <span class="number">0</span>;<span class="comment">//接收数据计数清零</span></div><div class="line">            Usart_AT_flage = <span class="number">1</span>;<span class="comment">//数据接收成功标志位</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(Usart_Cnt &gt; <span class="number">20</span>)<span class="comment">//</span></div><div class="line">        &#123;</div><div class="line">            Usart_Cnt = <span class="number">0</span>;</div><div class="line">        &#125;    </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>USART.h</code>的代码</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __USART_H_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> __USART_H_</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _USART_C_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _USART_ex_ extern</span></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _USART_ex_</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line">_USART_ex_ <span class="keyword">unsigned</span> <span class="keyword">char</span> Usart_Receive[<span class="number">20</span>];</div><div class="line">_USART_ex_ <span class="keyword">unsigned</span> <span class="keyword">char</span> Usart_Cnt;</div><div class="line">_USART_ex_ bit Usart_AT_flage;</div><div class="line">_USART_ex_ bit Command_Flag;</div><div class="line">_USART_ex_ <span class="keyword">unsigned</span> <span class="keyword">char</span> UsartData;</div><div class="line">_<span class="function">USART_ex_ <span class="keyword">void</span> <span class="title">InitUART</span><span class="params">(<span class="keyword">void</span>)</span></span>;<span class="comment">//串口初始化</span></div><div class="line">_<span class="function">USART_ex_ <span class="keyword">void</span> <span class="title">Send_Uart</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> value)</span></span>; </div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<p><strong>Arduino 开源 LX1972 环境光传感器 带滤波 模拟</strong></p>
+<p><img src="https://img.alicdn.com/imgextra/i2/85454698/TB2LKgRXVXXXXaWXXXXXXXXXXXX_!!85454698.jpg" alt="2">   </p>
+<p>简介：</p>
+<p>基于LX1972的环境光（可见光）传感器，对可见光照度的应特性与人眼的特性类似，可以模拟人对环境光线的强度的判断，从而方便做出与人友好互动的应用。可应用于照明控制、屏幕背光控制等。模块上带有感光元件和模拟传感器的标识，并且数据线的颜色与扩展板相对应。用户插上扩展板，烧录我们提供的实例代码即可使用。<br>模拟光线传感器选型指南，点击查看。大家可以了解不同传感器的感光特性。<br>仅对可见光敏感，不需要额外的过滤镜<br>内置温度补偿，工作温度范围内输出保持稳定<br>良好的线性输出<br>输出低通滤波（小于50Hz）</p>
+<p>技术规格：</p>
+<p>工作电压： DC 3~5.5V<br>工作温度： -40~80°C<br>照度范围： 1 – 800Lux<br>输出信号： 模拟电压，在5V工作电压情况范围0 – 3.6V<br>模块尺寸： 30 x 22mm</p>
+<p>测试例程：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  Serial.begin(<span class="number">9600</span>); <span class="comment">// open serial port, set the baud rate to 9600 bps</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">      <span class="keyword">int</span> val;</div><div class="line">      val=analogRead(<span class="number">0</span>);      <span class="comment">//connect sensor to Analog 0</span></div><div class="line">      Serial.println(val);    <span class="comment">//print the value to serial        </span></div><div class="line">      delay(<span class="number">100</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Arduino简单实例之二:光敏传感器</strong></p>
+<ol>
+<li><p>说明</p>
+<p>光敏传感器是把光信号变成电信号的一种传感器，它利用半导体的光电效应制成的一种电阻值随入射光的强弱而改变的电阻器;入射光强,电阻减小,入射光弱,电阻增大。<br>可用电位器（螺丝）调节亮度阀值，亮度大于设定值时DO输出低电平，反之输出高电平。AO输出具体的亮度值。建议购买四脚的（三脚的没有AO）</p>
+</li>
+<li><p>硬件</p>
+<ul>
+<li>光敏传感器模块</li>
+<li>Arduino</li>
+<li>杜邦线</li>
+</ul>
+</li>
+<li><p>连接</p>
+<p><code>VCC</code>接 <code>arduino</code> 的<code>3.3</code>或<code>5V</code><br><code>GND</code>接<code>arduino</code>的<code>GND</code><br><code>DO</code>接 <code>arduino</code>的<code>Digital</code>2<br><code>AO</code>接 <code>arduino</code>的<code>Analog 0</code></p>
+<p>​</p>
+<p><img src="http://img.blog.csdn.net/20170220125150050?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGlleWFuMDgxMQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="3"></p>
+</li>
+<li><p>代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> PIN_A 0</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> PIN_D 2</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></div><div class="line">&#123;</div><div class="line">  Serial.begin(<span class="number">9600</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">int</span> val;</div><div class="line">  val=analogRead(PIN_A);</div><div class="line">  Serial.print(<span class="string">"a:"</span>);</div><div class="line">  Serial.print(val);</div><div class="line">  Serial.print(<span class="string">", d:"</span>);</div><div class="line">  val=digitalRead(PIN_D);</div><div class="line">  Serial.println(val);</div><div class="line">  delay(<span class="number">500</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
 
       
     </div>
@@ -439,8 +465,8 @@ MainActivity.java
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/12/读这篇文档/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/19/Xmind install/" rel="prev" title="Xmind install">
+                Xmind install <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -564,7 +590,7 @@ MainActivity.java
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#远程灯光控制系统的实现"><span class="nav-number">1.</span> <span class="nav-text">远程灯光控制系统的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Android客户端的配置"><span class="nav-number">1.1.</span> <span class="nav-text">Android客户端的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Arduino配置"><span class="nav-number">1.2.</span> <span class="nav-text">Arduino配置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mathjax-true"><span class="nav-number">1.</span> <span class="nav-text">mathjax = true</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程灯光控制系统的实现"><span class="nav-number"></span> <span class="nav-text">远程灯光控制系统的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Android客户端的配置"><span class="nav-number">1.</span> <span class="nav-text">Android客户端的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Arduino配置"><span class="nav-number">2.</span> <span class="nav-text">Arduino配置</span></a></li></ol></div>
             
 
           </div>
