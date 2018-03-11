@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="taczer.github.io/"/>
-  <updated>2017-12-01T14:37:57.784Z</updated>
+  <updated>2018-01-26T15:18:17.284Z</updated>
   <id>taczer.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通信原理笔记</title>
+    <link href="taczer.github.io/2018/03/11/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
+    <id>taczer.github.io/2018/03/11/通信原理笔记/</id>
+    <published>2018-03-11T02:28:57.331Z</published>
+    <updated>2018-01-26T15:18:17.284Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>重新学习信号与系统和通信原理，准备来年的考研。教材选择奥本海默的《信号与系统》和郑居里的《信号与系统》，通信原理选择北邮的周炯槃和西电的高西平</p><h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;重新学习信号与系统和通信原理，准备来年的考研。教材选择奥本海默的《信号与系统》和郑居里的《信号与系统》，通信原理选择北邮的周炯槃和西电的高西
+      
+    
+    </summary>
+    
+    
+      <category term="通信" scheme="taczer.github.io/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客、写作的完美结合：Hexo + Markdown</title>
+    <link href="taczer.github.io/2018/03/11/%E5%8D%9A%E5%AE%A2%E3%80%81%E5%86%99%E4%BD%9C%E7%9A%84%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88%EF%BC%9AHexo-+-Markdown/"/>
+    <id>taczer.github.io/2018/03/11/博客、写作的完美结合：Hexo-+-Markdown/</id>
+    <published>2018-03-11T02:27:23.277Z</published>
+    <updated>2017-12-03T15:43:01.765Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>前言</strong></p><p>起初因为被Markdown格式的写作风格吸引：简练，无需刻意排版，支持数学公式渲染和代码高亮，支持导出为PDF等格式方便跨设备使用，它既不像Word那样需要刻意的排版以至于打扰到写作，也不至于像Latex那样需要繁琐的配置，让你能直接上手写作，而不是花费时间在其他地方。</p><p>话虽如此，当正式写的时候你就会发现有很多问题了。首先是找到一款颜值高且功能完备（满足我的需求）的Markdown编辑器。</p><hr><h2 id="Markdown编辑器推荐"><a href="#Markdown编辑器推荐" class="headerlink" title="Markdown编辑器推荐"></a>Markdown编辑器推荐</h2><p>说明：以下Markdown编辑器包含通过组合方式实现功能的且只讨论Windows平台</p><h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h3><p><strong>优点：</strong></p><p>首先，这篇文字就是在Typora上写就的。Typora拥有所有我所必须的功能：数学公式支持，代码高亮，导出多种格式，方便在手机上，iPad上观看。除此以外，Typora的颜值也相当了得，在使用过大概十多款编辑器后，还是它最受我的喜爱。</p><p><strong>缺点：</strong></p><p>不支持云同步。目前的解决方案是云坚果云进行同步。</p><h3 id="LitteStory（小书匠）"><a href="#LitteStory（小书匠）" class="headerlink" title="LitteStory（小书匠）"></a>LitteStory（小书匠）</h3><p><strong>优点：</strong></p><p>小书匠应该是我使用频率最高的一款Markdown编辑器了，它功能之丰富，目前在这个领域应该还没有什么敌手。基本功能：数学公式、代码高亮、多格式导出、云同步、个性化导出、编辑器主题丰富</p><p><strong>缺点：</strong></p><p>界面设计不够好，有选项之间会遮挡等问题的存在。</p><h3 id="有道云笔记"><a href="#有道云笔记" class="headerlink" title="有道云笔记"></a>有道云笔记</h3><p><strong>优点：</strong></p><p>格式支持齐全，支持多设备云同步。支持网页剪藏功能，微信、微博页面保存。多终端支持</p><p><strong>缺点：</strong></p><p>有广告</p><h3 id="为知笔记"><a href="#为知笔记" class="headerlink" title="为知笔记"></a>为知笔记</h3><p><strong>优点：</strong></p><p>格式支持齐全，有插件扩展，支持多种编辑器，可定制。多终端支持</p><p><strong>缺点：</strong></p><p>需要付费</p><h3 id="Yu-Writer"><a href="#Yu-Writer" class="headerlink" title="Yu Writer"></a>Yu Writer</h3><p><strong>优点：</strong></p><p>格式支持齐全，</p><p><strong>缺点：</strong></p><p>没有云听不</p><h3 id="Moeditor"><a href="#Moeditor" class="headerlink" title="Moeditor"></a>Moeditor</h3><p><strong>优点：</strong></p><p>格式支持齐全</p><p><strong>缺点：</strong></p><p>不支持多设备云同步。</p><p>###VsCode+markdown preview enhanced</p><p><strong>优点：</strong></p><p>格式支持齐全，无缝衔接到代码说明，通过插件支持导出到PDF</p><p><strong>缺点：</strong></p><p>需要配置，打开速度不如sublime，没有同步</p><h3 id="Sublime-markdown-preview"><a href="#Sublime-markdown-preview" class="headerlink" title="Sublime+markdown preview"></a>Sublime+markdown preview</h3><p><strong>优点：</strong></p><p>格式支持齐全，打开速度快，写作体验好</p><p><strong>缺点：</strong></p><p>需要配置，无云同步</p><h3 id="Atom-markdown-preview-enhanced"><a href="#Atom-markdown-preview-enhanced" class="headerlink" title="Atom+markdown preview enhanced"></a>Atom+markdown preview enhanced</h3><p><strong>优点：</strong></p><p>格式支持齐全，界面现代化</p><p><strong>缺点：</strong></p><p>无云同步，打开速度慢</p><h3 id="Visual-Studio-2017-Markdown-Support"><a href="#Visual-Studio-2017-Markdown-Support" class="headerlink" title="Visual Studio 2017+Markdown Support"></a>Visual Studio 2017+Markdown Support</h3><p><strong>优点：</strong></p><p>支持数学公式，支持在VS下写Markdown文档</p><p><strong>缺点：</strong></p><p>在VS下就不要求同步了吧······</p><h3 id="蚂蚁笔记"><a href="#蚂蚁笔记" class="headerlink" title="蚂蚁笔记"></a>蚂蚁笔记</h3><p><strong>优点：</strong></p><p>格式支持齐全，支持多设备云同步。自带博客支持，将写好的markdown文档发布成为blog</p><p><strong>缺点：</strong></p><p>收费，界面设计不够漂亮</p><h3 id="作业部落"><a href="#作业部落" class="headerlink" title="作业部落"></a>作业部落</h3><p><strong>优点：</strong></p><p>格式支持齐全</p><p><strong>缺点：</strong></p><p>收费才能导出PDF</p><h3 id="OneNote"><a href="#OneNote" class="headerlink" title="OneNote"></a>OneNote</h3><p><strong>优点：</strong></p><p>格式支持齐全，通过插件可以解决所有所需</p><p><strong>缺点：</strong></p><p>写公式的时候体验不好，复制latex公式时不能转化，只能手打</p><h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><h3 id="CSDN"><a href="#CSDN" class="headerlink" title="CSDN"></a>CSDN</h3><p>免费的博客</p><p>###博客园</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;起初因为被Markdown格式的写作风格吸引：简练，无需刻意排版，支持数学公式渲染和代码高亮，支持导出为PDF等格式方便跨设备使用，它既不像Word那样需要刻意的排版以至于打扰到写作，也不至于像Latex那样需要繁琐的配
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
